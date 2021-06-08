@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="layout.css">
+    <script src="wishcalc.js"></script>
+    <title>primo calculator</title>
+  </head>
+
+<body>
+  <div class = "calc">
+  <form id="frm1">
+    <label for = "wishType">Banner type:</label>
+    <select id = "wishType"> name = "wishType">
+        <option value = "character">Character</option>
+        <option value = "weapon">Weapon</option>
+    </select><br><br><br>
+
+  Currently held primogems: <input type = "number" name = "primos" id = "primos" value = "0"><br>
+  Currently held fates: <input type = "number" name = "fates" id = "fates" value = "0"><br>
+  Currently held genesis crystals: <input type = "number" name = "genesis" id = "genesis" value = "0"><br>
+  Currently held stardust:<br>
+  -----------------
+  <h3>Wishes earned from shop and BP</h3>
+  Monthly wishes:<br>
+  Days left on Welkin Moon: <input type = "number" name = "welkin" id = "welkin" value = "0"><br>
+  Number of Gnostic Hymns: <input type = "number" name = "gnostic" id = "gnostic" value = "0"><br>
+  -----------------
+  <h3>Wishes earned from dailies</h3>
+  Saving start date: <input type = "date" name = "startDate" id = "startDate"><br>
+  Banner end date: <input type = "date" name = "endDate" id = "endDate"><br>
+  <p id = "displayDaysUntilEnd">Days before banner ends:</p>
+  -----------------
+  <h3>Prediction based primos</h3>
+  Primos earned from rank up:<br>
+  Event, promo & maintenance freemos:<br><br>
+
+</form>
+
+<button onclick="calculate()">Calculate</button><br><br>
+
+<p id="displayWishes">Total Wishes: 0</p><br>
+<p id="displayRemPrimos">Remaining Primogems: 0</p><br>
+<p id="displayPity">Number of pity: 0</p><br>
+
+</div>
+
+</body>
+</html>
