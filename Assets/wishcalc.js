@@ -10,22 +10,12 @@ window.onload = function currentDate() {
 }
 
   function calculate() {
-  var x = document.getElementById("frm1");
   var totalWishes = parseInt("");
   var primos = parseInt(document.getElementById("primos").value);
   var fates = parseInt(document.getElementById("fates").value);
   var welkin = parseInt(document.getElementById("welkin").value);
   var gnostic = parseInt(document.getElementById("gnostic").value);
   var genesis = parseInt(document.getElementById("genesis").value);
-
-  var startDate = document.getElementById("startDate").value;
-  var endDate = document.getElementById("endDate").value;
-  if (!endDate) {
-    daysUntilEnd = parseInt(0);
-  } else {
-    var diffInMs = new Date(endDate) - new Date(startDate);
-    var daysUntilEnd = parseInt(diffInMs / (1000 * 60 * 60 * 24));
-  }
 
   var primosLeft = parseInt("0");
 
@@ -48,10 +38,19 @@ window.onload = function currentDate() {
     pities = totalWishes / 80;
   }
 
-
-  document.getElementById("displayDaysUntilEnd").innerHTML = "Days before banner ends: " + daysUntilEnd;
-
   document.getElementById("displayWishes").innerHTML = "Total Wishes: " + totalWishes;
   document.getElementById("displayRemPrimos").innerHTML = "Remaining Primogems: " + primosLeft;
   document.getElementById("displayPity").innerHTML = "Number of hard pity: " + pities;
+}
+
+function calculateDate() {
+  var startDate = document.getElementById("startDate").value;
+  var endDate = document.getElementById("endDate").value;
+  if (!endDate) {
+    daysUntilEnd = parseInt(0);
+  } else {
+    var diffInMs = new Date(endDate) - new Date(startDate);
+    var daysUntilEnd = parseInt(diffInMs / (1000 * 60 * 60 * 24));
+  }
+    document.getElementById("displayDaysUntilEnd").innerHTML = "Days before banner ends: " + daysUntilEnd;
 }
