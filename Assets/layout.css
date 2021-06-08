@@ -1,0 +1,43 @@
+td {
+  text-align: center;
+  align-content: center;
+  padding: 10px;
+}
+th {
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+}
+table, th, td {
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+  font-family: sans-serif;
+}
+
+.chara img {
+    height: auto;
+    width: 75px;
+    margin: 0;
+}
+
+.element img {
+  height: auto;
+  width: 25px;
+}
+
+.weapon img {
+  height:auto;
+  width: 25px;
+}
+
+.confirmed {
+  background-color: #d8e2dc
+}
+
+.leaked {
+  background-color: #ffe5d9
+}
+
+.unknown {
+  background-color: #ffcad4
+}
