@@ -23,6 +23,15 @@ window.onload = function currentDate() {
   var pities = parseInt("0");
   var wishType = document.getElementById("wishType").value;
 
+  var startDate = document.getElementById("startDate").value;
+  var endDate = document.getElementById("endDate").value;
+  if (!endDate) {
+    daysUntilEnd = parseInt(0);
+  } else {
+    var diffInMs = new Date(endDate) - new Date(startDate);
+    daysUntilEnd = parseInt(diffInMs / (1000 * 60 * 60 * 24));
+  }
+
   if (welkin > daysUntilEnd) {
     welkin = daysUntilEnd;
   }
@@ -45,13 +54,5 @@ window.onload = function currentDate() {
 }
 
 function calculateDate() {
-  var startDate = document.getElementById("startDate").value;
-  var endDate = document.getElementById("endDate").value;
-  if (!endDate) {
-    daysUntilEnd = parseInt(0);
-  } else {
-    var diffInMs = new Date(endDate) - new Date(startDate);
-    daysUntilEnd = parseInt(diffInMs / (1000 * 60 * 60 * 24));
-  }
     document.getElementById("displayDaysUntilEnd").innerHTML = "Days before banner ends: " + daysUntilEnd;
 }
