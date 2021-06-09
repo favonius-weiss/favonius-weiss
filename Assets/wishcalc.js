@@ -1,5 +1,3 @@
-var daysUntilEnd = parseInt("0");
-
 window.onload = function currentDate() {
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, '0');
@@ -18,7 +16,15 @@ window.onload = function currentDate() {
   var welkin = parseInt(document.getElementById("welkin").value);
   var gnostic = parseInt(document.getElementById("gnostic").value);
   var genesis = parseInt(document.getElementById("genesis").value);
-  var daysUntilEnd = parseInt("");
+
+  var startDate = document.getElementById("startDate").value;
+  var endDate = document.getElementById("endDate").value;
+  if (!endDate) {
+    daysUntilEnd = parseInt(0);
+  } else {
+    var diffInMs = new Date(endDate) - new Date(startDate);
+    var daysUntilEnd = parseInt(diffInMs / (1000 * 60 * 60 * 24));
+  }
 
   var primosLeft = parseInt("0");
 
@@ -46,18 +52,14 @@ window.onload = function currentDate() {
   document.getElementById("displayPity").innerHTML = "Number of hard pity: " + pities;
 }
 
-function displayDaysLeft() {
-  calculateDateDiff();
-  document.getElementById("displayDaysUntilEnd").innerHTML = "Days before banner ends: " + daysUntilEnd;
-}
-
-function calculateDateDiff() {
+function calculateDate() {
   var startDate = document.getElementById("startDate").value;
   var endDate = document.getElementById("endDate").value;
   if (!endDate) {
-    daysUntilEnd = parseInt("0");
+    daysUntilEnd = parseInt(0);
   } else {
     var diffInMs = new Date(endDate) - new Date(startDate);
-    daysUntilEnd = parseInt(diffInMs / (1000 * 60 * 60 * 24));
+    var daysUntilEnd = parseInt(diffInMs / (1000 * 60 * 60 * 24));
   }
+    document.getElementById("displayDaysUntilEnd").innerHTML = "Days before banner ends: " + daysUntilEnd;
 }
