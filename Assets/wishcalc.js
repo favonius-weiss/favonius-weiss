@@ -1,4 +1,4 @@
-var daysUntilEnd = parseInt(0);
+var daysUntilEnd = parseInt("0");
 
 window.onload = function currentDate() {
   var today = new Date();
@@ -55,7 +55,7 @@ function calculateDateDiff() {
   var startDate = document.getElementById("startDate").value;
   var endDate = document.getElementById("endDate").value;
   if (!endDate) {
-    daysUntilEnd = parseInt(0);
+    daysUntilEnd = parseInt("0");
   } else {
     var diffInMs = new Date(endDate) - new Date(startDate);
     daysUntilEnd = parseInt(diffInMs / (1000 * 60 * 60 * 24));
