@@ -25,7 +25,6 @@ window.onload = function currentDate() {
   var pities = parseInt("0");
   var wishType = document.getElementById("wishType").value;
 
-  calculateDateDiff();
   if (welkin > daysUntilEnd) {
     welkin = daysUntilEnd;
   }
