@@ -54,6 +54,8 @@ window.onload = function currentDate() {
 }
 
 function calculateDate() {
+  var startDate = document.getElementById("startDate").value;
+  var endDate = document.getElementById("endDate").value;
   var diffInMs = new Date(endDate) - new Date(startDate);
   daysUntilEnd = parseInt(diffInMs / (1000 * 60 * 60 * 24));
   document.getElementById("displayDaysUntilEnd").innerHTML = "Days before banner ends: " + daysUntilEnd;
