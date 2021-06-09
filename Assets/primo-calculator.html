@@ -19,29 +19,35 @@
   Currently held primogems: <input type = "number" name = "primos" id = "primos" value = "0"><br>
   Currently held fates: <input type = "number" name = "fates" id = "fates" value = "0"><br>
   Currently held genesis crystals: <input type = "number" name = "genesis" id = "genesis" value = "0"><br>
-  Currently held stardust:<br>
+  Currently held starglitter:<br>
   -----------------
   <h3>Wishes earned from shop and BP</h3>
-  Monthly wishes:<br>
+  Monthly stardust wishes:<br>
   Days left on Welkin Moon: <input type = "number" name = "welkin" id = "welkin" value = "0"><br>
   Number of Gnostic Hymns: <input type = "number" name = "gnostic" id = "gnostic" value = "0"><br>
   -----------------
   <h3>Wishes earned from dailies</h3>
   Saving start date: <input type = "date" name = "startDate" id = "startDate"><br>
   Banner end date: <input type = "date" onchange = "calculateDate()" name = "endDate" id = "endDate"><br>
-  <p id = "displayDaysUntilEnd">Days before banner ends:</p>
+  <p id = "displayDaysUntilEnd">Days before banner ends: 0</p>
   -----------------
   <h3>Prediction based primos</h3>
   Primos earned from rank up:<br>
-  Event, promo & maintenance freemos:<br><br>
+  Event, promo & maintenance freemos:<br>
+  Reuse starglitter <input type = "checkbox" name = "starglitter" id = "starglitter"><br><br>
 
 </form>
 
 <button onclick="calculate()">Calculate</button><br><br>
 
+<p id="displayExpectedSG">Expected starglitter from current wishes: 0</p><br>
+<p id="displayExtraWishes">Expected extra wishes from starglitter: 0</p><br>
+
 <p id="displayWishes">Total Wishes: 0</p><br>
 <p id="displayRemPrimos">Remaining Primogems: 0</p><br>
 <p id="displayPity">Number of pity: 0</p><br>
+
+
 
 </div>
 
