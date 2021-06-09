@@ -16,6 +16,7 @@ window.onload = function currentDate() {
   var welkin = parseInt(document.getElementById("welkin").value);
   var gnostic = parseInt(document.getElementById("gnostic").value);
   var genesis = parseInt(document.getElementById("genesis").value);
+  var daysUntilEnd = parseInt("0");
 
   var primosLeft = parseInt("0");
 
@@ -50,7 +51,7 @@ function calculateDate() {
     daysUntilEnd = parseInt(0);
   } else {
     var diffInMs = new Date(endDate) - new Date(startDate);
-    var daysUntilEnd = parseInt(diffInMs / (1000 * 60 * 60 * 24));
+    daysUntilEnd = parseInt(diffInMs / (1000 * 60 * 60 * 24));
   }
     document.getElementById("displayDaysUntilEnd").innerHTML = "Days before banner ends: " + daysUntilEnd;
 }
