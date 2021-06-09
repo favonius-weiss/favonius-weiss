@@ -16,7 +16,7 @@ window.onload = function currentDate() {
   var welkin = parseInt(document.getElementById("welkin").value);
   var gnostic = parseInt(document.getElementById("gnostic").value);
   var genesis = parseInt(document.getElementById("genesis").value);
-  var daysUntilEnd = parseInt("0");
+  var daysUntilEnd = parseInt("");
 
   var primosLeft = parseInt("0");
 
