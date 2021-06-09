@@ -1,3 +1,5 @@
+var daysUntilEnd = parseInt(0);
+
 window.onload = function currentDate() {
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, '0');
